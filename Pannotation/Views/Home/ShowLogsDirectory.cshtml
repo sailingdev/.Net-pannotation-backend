@@ -1,0 +1,45 @@
+@model List<Dictionary<string, string>>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowLogsDirectory</title>
+</head>
+<body>
+    @if (ViewBag.Prev != null)
+    {
+        <a href="/ShowLogsDirectory?dir=@ViewBag.Prev">..</a>
+    }
+
+    @foreach (var dir in Model[0])
+    {
+        <div>
+            <a href="/ShowLogsDirectory?dir=@dir.Key">@System.IO.Path.GetFileName(dir.Key)</a>
+        </div>
+    }
+
+    <div>
+        <div style="display: inline-block;">
+            @foreach (var file in Model[1])
+            {
+            <div>
+                <a href="/ShowLog?path=@file.Key">@System.IO.Path.GetFileName(file.Key)</a>
+            </div>
+            }
+        </div>
+        <div style="display: inline-block; padding-left: 10px">
+            @foreach (var file in Model[1])
+            {
+            <div>
+                <span>@file.Value</span>
+            </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

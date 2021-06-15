@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AWSSDK.Core" Version="3.3.103.29" />
+    <PackageReference Include="AWSSDK.SimpleEmail" Version="3.3.101.35" />
+    <PackageReference Include="DotNetZip" Version="1.13.4" />
+    <PackageReference Include="itext7" Version="7.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="PasswordGenerator" Version="1.1.3" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0004" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.5.0" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pannotation.Common\Pannotation.Common.csproj" />
+    <ProjectReference Include="..\Pannotation.DAL\Pannotation.DAL.csproj" />
+    <ProjectReference Include="..\Pannotation.Domain\Pannotation.Domain.csproj" />
+    <ProjectReference Include="..\Pannotation.Models\Pannotation.Models.csproj" />
+    <ProjectReference Include="..\Pannotation.ScheduledTasks\Pannotation.ScheduledTasks.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+</Project>

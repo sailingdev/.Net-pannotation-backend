@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="SQL\**" />
+    <EmbeddedResource Remove="SQL\**" />
+    <None Remove="SQL\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190123095832_Profile.cs" />
+    <Compile Remove="Migrations\20190128143242_userRole.cs" />
+    <Compile Remove="Migrations\20190711075923_FacebookAuth.cs" />
+    <Compile Remove="Migrations\20190711084620_FacebookAuth.cs" />
+    <Compile Remove="Migrations\20190823134447_Create_Songheets.cs" />
+    <Compile Remove="Migrations\20190823134735_Create_Songheets.cs" />
+    <Compile Remove="Migrations\20190910140835_Create_TransactionInfo_and_CardInfo.cs" />
+    <Compile Remove="Migrations\20190910144817_Create_TransactionInfo_and_CardInfo.cs" />
+    <Compile Remove="Migrations\20190912074225_Alter_Transaction_CardId_Index.cs" />
+    <Compile Remove="Migrations\20190913161122_Create_Cart.cs" />
+    <Compile Remove="Migrations\20190917105053_Create_CartItem.cs" />
+    <Compile Remove="Migrations\20190926082616_Create_Orders_PaymentOrderId.cs" />
+    <Compile Remove="Migrations\20191111134947_Create_OtherFile.cs" />
+    <Compile Remove="Migrations\20191111134947_Create_OtherFile.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pannotation.Common\Pannotation.Common.csproj" />
+    <ProjectReference Include="..\Pannotation.Domain\Pannotation.Domain.csproj" />
+    <ProjectReference Include="..\Pannotation.Models\Pannotation.Models.csproj" />
+  </ItemGroup>
+
+</Project>

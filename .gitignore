@@ -1,0 +1,7 @@
+/**/Logs
+/**/*.csproj.user
+/**/*.DotSettings.user
+/**/bin
+/**/obj
+/**/.vs
+/Pannotation.xml
